@@ -12,7 +12,7 @@
 
 ### 软件概览
 
-![overview](img/overview.png)
+![overview](img/overview.PNG)
 
 ### 信号量编辑
 
