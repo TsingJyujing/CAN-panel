@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03DDEABA-05C2-43E7-8250-7FB0DA1D4344}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CANSignalControlPanel</RootNamespace>
+    <AssemblyName>CANSignalControlPanel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CANSignalControlPanel.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>架.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Shell32, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>bin\x86\Release\Interop.Shell32.dll</HintPath>
+    </Reference>
+    <Reference Include="Noesis.Javascript">
+      <HintPath>JSEngine\Noesis.Javascript.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\CAN.cs" />
+    <Compile Include="Data\CANConfigure.cs" />
+    <Compile Include="Data\CANData.cs" />
+    <Compile Include="Driver\CANDriver.cs" />
+    <Compile Include="Driver\DeviceUtil.cs" />
+    <Compile Include="Driver\FrmDeviceSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\FrmDeviceSelect.Designer.cs">
+      <DependentUpon>FrmDeviceSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\IntrepidcsDriver.cs" />
+    <Compile Include="Driver\iTekAnalystDriver.cs" />
+    <Compile Include="Driver\iTekAPI.cs" />
+    <Compile Include="Driver\SomebusAPI.cs" />
+    <Compile Include="Driver\SomebusDriver.cs" />
+    <Compile Include="Forms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEditJavascript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEditJavascript.Designer.cs">
+      <DependentUpon>FrmEditJavascript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmJSIDE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmJSIDE.Designer.cs">
+      <DependentUpon>FrmJSIDE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmOptions.Designer.cs">
+      <DependentUpon>FrmOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSignalTransmit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSignalTransmit.Designer.cs">
+      <DependentUpon>FrmSignalTransmit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSignalReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSignalReceive.Designer.cs">
+      <DependentUpon>FrmSignalReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmWaiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmWaiting.Designer.cs">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\DriverManager.cs" />
+    <Compile Include="Service\JavascriptEngine.cs" />
+    <Compile Include="Service\JavascriptIDE.cs" />
+    <Compile Include="Service\TransmitThread.cs" />
+    <Compile Include="UserWidget\CANTreeViewer.xaml.cs">
+      <DependentUpon>CANTreeViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\FrmEditMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserWidget\FrmEditMessage.Designer.cs">
+      <DependentUpon>FrmEditMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\FrmModifySignal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserWidget\FrmModifySignal.Designer.cs">
+      <DependentUpon>FrmModifySignal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserWidget\Interfaces.cs" />
+    <Compile Include="UserWidget\PythonEditor.xaml.cs">
+      <DependentUpon>PythonEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\JavascriptEditor.xaml.cs">
+      <DependentUpon>JavascriptEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\MessageTreeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserWidget\MessageTreeEdit.Designer.cs">
+      <DependentUpon>MessageTreeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\MultiLineList.xaml.cs">
+      <DependentUpon>MultiLineList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Continuous.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Continuous.Designer.cs">
+      <DependentUpon>Continuous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Discrete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Discrete.Designer.cs">
+      <DependentUpon>Discrete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\DM1FaultCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\DM1FaultCode.Designer.cs">
+      <DependentUpon>DM1FaultCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Switch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Switch.Designer.cs">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Userdefined.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserWidget\SignalEditor\Userdefined.Designer.cs">
+      <DependentUpon>Userdefined.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\FileUtility.cs" />
+    <Compile Include="Utility\JavaScriptUtility.cs" />
+    <Compile Include="Utility\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\Utilities.cs" />
+    <EmbeddedResource Include="Driver\FrmDeviceSelect.resx">
+      <DependentUpon>FrmDeviceSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEditJavascript.resx">
+      <DependentUpon>FrmEditJavascript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmJSIDE.resx">
+      <DependentUpon>FrmJSIDE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmOptions.resx">
+      <DependentUpon>FrmOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSignalTransmit.resx">
+      <DependentUpon>FrmSignalTransmit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSignalReceive.resx">
+      <DependentUpon>FrmSignalReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmWaiting.resx">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserWidget\FrmEditMessage.resx">
+      <DependentUpon>FrmEditMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\FrmModifySignal.resx">
+      <DependentUpon>FrmModifySignal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\MessageTreeEdit.resx">
+      <DependentUpon>MessageTreeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\SignalEditor\Continuous.resx">
+      <DependentUpon>Continuous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\SignalEditor\Discrete.resx">
+      <DependentUpon>Discrete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\SignalEditor\DM1FaultCode.resx">
+      <DependentUpon>DM1FaultCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\SignalEditor\Switch.resx">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserWidget\SignalEditor\Userdefined.resx">
+      <DependentUpon>Userdefined.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\FolderTreeView\FolderTreeView.csproj">
+      <Project>{b167951a-3616-40eb-849e-beacacc712aa}</Project>
+      <Name>FolderTreeView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj">
+      <Project>{6c55b776-26d4-4db3-a6ab-87e783b2f3d1}</Project>
+      <Name>ICSharpCode.AvalonEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogService\LogService.csproj">
+      <Project>{009cbdc2-004e-46c7-9833-e92a7b6c4e19}</Project>
+      <Name>LogService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UserWidget\CANTreeViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserWidget\PythonEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserWidget\JavascriptEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserWidget\MultiLineList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ico_Panel.ico" />
+    <Content Include="js\pycow.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="js\user_defined.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="main.ico" />
+    <Content Include="js\init.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="架.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

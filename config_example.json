@@ -1,0 +1,475 @@
+{
+    "CANMessageDictionary": [
+        {
+            "Key": 217056279,
+            "Value": {
+                "ID": 217056279,
+                "Name": "EEC1",
+                "SignalList": [
+                    {
+                        "BitOffset": 24,
+                        "BitSize": 16,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "发动机转速",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 0.125,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 10
+            }
+        },
+        {
+            "Key": 218000622,
+            "Value": {
+                "ID": 218000622,
+                "Name": "TCO1",
+                "SignalList": [
+                    {
+                        "BitOffset": 48,
+                        "BitSize": 16,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "车速",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 0.0039063,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 50
+            }
+        },
+        {
+            "Key": 419357975,
+            "Value": {
+                "ID": 419357975,
+                "Name": "EngHrRev",
+                "SignalList": [
+                    {
+                        "BitOffset": 0,
+                        "BitSize": 32,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "发动机累计运行时间",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 0.05,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 3000
+            }
+        },
+        {
+            "Key": 419360279,
+            "Value": {
+                "ID": 419360279,
+                "Name": "EngTemp",
+                "SignalList": [
+                    {
+                        "BitOffset": 0,
+                        "BitSize": 8,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "发动机冷却水温度",
+                        "UDFName": "",
+                        "cOffset": -40,
+                        "cRatio": 1,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 1000
+            }
+        },
+        {
+            "Key": 419360535,
+            "Value": {
+                "ID": 419360535,
+                "Name": "EFL_P1",
+                "SignalList": [
+                    {
+                        "BitOffset": 24,
+                        "BitSize": 8,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "机油压力",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 4,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 500
+            }
+        },
+        {
+            "Key": 419420183,
+            "Value": {
+                "ID": 419420183,
+                "Name": "KCC",
+                "SignalList": [
+                    {
+                        "BitOffset": 16,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "远光灯",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 24,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "主车右转向",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 26,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "主车左转向",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    }
+                ],
+                "TxPeriod": 200
+            }
+        },
+        {
+            "Key": 419420695,
+            "Value": {
+                "ID": 419420695,
+                "Name": "FSC",
+                "SignalList": [
+                    {
+                        "BitOffset": 20,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "取力1信号（停车取力）",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 22,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "取力2信号（行车取力）",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    }
+                ],
+                "TxPeriod": 200
+            }
+        },
+        {
+            "Key": 419421207,
+            "Value": {
+                "ID": 419421207,
+                "Name": "ISS1",
+                "SignalList": [
+                    {
+                        "BitOffset": 28,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "排气制动",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 50,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "驾驶室翻转(驾驶室未锁止)",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 52,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "翻斗未回位(车厢举升)",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    }
+                ],
+                "TxPeriod": 200
+            }
+        },
+        {
+            "Key": 419421463,
+            "Value": {
+                "ID": 419421463,
+                "Name": "ISS2",
+                "SignalList": [
+                    {
+                        "BitOffset": 14,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "驻车制动",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 28,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "空滤堵塞",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    }
+                ],
+                "TxPeriod": 200
+            }
+        },
+        {
+            "Key": 419422487,
+            "Value": {
+                "ID": 419422487,
+                "Name": "MD",
+                "SignalList": [
+                    {
+                        "BitOffset": 16,
+                        "BitSize": 8,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "气压1传感器",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 8,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 24,
+                        "BitSize": 8,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "气压2传感器",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 8,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 32,
+                        "BitSize": 8,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "燃油量",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 0.4,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 200
+            }
+        },
+        {
+            "Key": 419425303,
+            "Value": {
+                "ID": 419425303,
+                "Name": "TotB",
+                "SignalList": [
+                    {
+                        "BitOffset": 32,
+                        "BitSize": 32,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "总里程",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 2.5,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 1000
+            }
+        },
+        {
+            "Key": 419427903,
+            "Value": {
+                "ID": 419427903,
+                "Name": "OSU",
+                "SignalList": [
+                    {
+                        "BitOffset": 0,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "油量传感器接入状态",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 2,
+                        "BitSize": 2,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "油量测量值状态",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 3
+                    },
+                    {
+                        "BitOffset": 8,
+                        "BitSize": 8,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "燃油量",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 0.5,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 3000
+            }
+        },
+        {
+            "Key": 419428178,
+            "Value": {
+                "ID": 419428178,
+                "Name": "WS",
+                "SignalList": [
+                    {
+                        "BitOffset": 0,
+                        "BitSize": 16,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "货物总重",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 16,
+                        "BitSize": 4,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "测量值状态",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 1000
+            }
+        },
+        {
+            "Key": 419361843,
+            "Value": {
+                "ID": 419361843,
+                "Name": "TIRE",
+                "SignalList": [
+                    {
+                        "BitOffset": 0,
+                        "BitSize": 4,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "轴位置",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 4,
+                        "BitSize": 4,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "轮胎位置",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 8,
+                        "BitSize": 8,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "轮胎压力",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 8,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 16,
+                        "BitSize": 16,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "轮胎温度",
+                        "UDFName": "",
+                        "cOffset": -273,
+                        "cRatio": 0.03125,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 40,
+                        "BitSize": 16,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "漏气检测",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 0.1,
+                        "sType": 0
+                    },
+                    {
+                        "BitOffset": 61,
+                        "BitSize": 3,
+                        "DefaultCANValue": 0,
+                        "DiscreteDecodeTable": [],
+                        "Name": "压力检测",
+                        "UDFName": "",
+                        "cOffset": 0,
+                        "cRatio": 1,
+                        "sType": 0
+                    }
+                ],
+                "TxPeriod": 500
+            }
+        }
+    ],
+    "UserDefinedScript": "function returnRaw(data){return data;};"
+}
